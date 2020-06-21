@@ -32,26 +32,27 @@ void loop() {
   } 
   switch (t) {
 
-    case ('F') :          // Move forward(all motors rotate in forward direction)
+    case 'F' :          // Move forward(all motors rotate in forward direction)
     digitalWrite(13, HIGH);
     digitalWrite(11, HIGH);
 
-    case ('B') :          // Move reverse (all motors rotate in reverse direction)
+    case 'B' :          // Move reverse (all motors rotate in reverse direction)
     digitalWrite(12, HIGH);
     digitalWrite(10, HIGH);
 
-    case ('R') :         // Turn right (left side motors rotate in forward direction, right side motors doesn't rotate)
+    case 'R' :         // Turn right (left side motors rotate in forward direction, right side motors doesn't rotate)
     digitalWrite(11, HIGH);
 
-    case ('L') :         // Turn left (right side motors rotate in forward direction, left side motors doesn't rotate)
+    case 'L' :         // Turn left (right side motors rotate in forward direction, left side motors doesn't rotate)
     digitalWrite(13, HIGH);
 
-    case ('S') :         // STOP (all motors stop)
+    case 'S' :         // STOP (all motors stop)
     digitalWrite(13, LOW);
     digitalWrite(12, LOW);
     digitalWrite(11, LOW);
     digitalWrite(10, LOW);
   }
+ 
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
